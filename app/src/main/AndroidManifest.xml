@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kaustubhpatkar.expensecalculator">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:windowSoftInputMode="adjustNothing"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+
+            android:name="com.example.kaustubhpatkar.expensecalculator.UserView"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kaustubhpatkar.expensecalculator.MainActivity" />
+
+        </activity>
+        <activity
+
+            android:name="com.example.kaustubhpatkar.expensecalculator.ExpenseCalculator"
+            android:parentActivityName=".UserView">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kaustubhpatkar.expensecalculator.UserView" />
+
+        </activity>
+        <activity
+
+            android:name="com.example.kaustubhpatkar.expensecalculator.AddExpense"
+            android:parentActivityName=".ExpenseCalculator">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.kaustubhpatkar.expensecalculator.ExpenseCalculator" />
+
+        </activity>
+
+
+    </application>
+
+</manifest>
